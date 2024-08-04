@@ -1,4 +1,10 @@
-body{
+body
+{
     background-color: black;
+}
+h2{
+    color: rgb(120, 9, 224);
+}
+p{
     color: white;
 }

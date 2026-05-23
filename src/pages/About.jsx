@@ -1,13 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import avatarImg from '../images/avatar.png';
 
 // ── 1. HERO ──────────────────────────────────────────────
 function AboutHero() {
   return (
     <section className="flex flex-col md:flex-row items-center gap-12 px-8 py-24 max-w-5xl mx-auto">
       <img
-        src="/avatar.png"
+        src={avatarImg}
         alt="Foto de Kiratsuji"
         className="w-48 h-48 rounded-full object-cover border-4 border-blue-500"
       />

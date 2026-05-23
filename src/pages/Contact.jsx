@@ -3,12 +3,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const socialLinks = [
-  { label: "GitHub", icon: "⌥", url: "https://github.com/seuusuario" },
-  { label: "LinkedIn", icon: "in", url: "https://linkedin.com/in/seuusuario" },
+  { label: "GitHub", icon: "⌥", url: "https://github.com/Kiratsuji" },
+  { label: "LinkedIn", icon: "in", url: "https://linkedin.com/in/isaac-lacerda-018ba62b0/" },
   {
-    label: "contato@seudominio.com",
+    label: "kiratsuji@outlook.com",
     icon: "✉",
-    url: "mailto:contato@seudominio.com",
+    url: "mailto:kiratsuji@outlook.com",
   },
 ];
 

@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import avatarImg from '../images/avatar.png';
+import bgImg from "../images/bg.png";
 
 // ── 1. HERO ──────────────────────────────────────────────
 function AboutHero() {
@@ -10,7 +11,7 @@ function AboutHero() {
       <img
         src={avatarImg}
         alt="Foto de Kiratsuji"
-        className="w-48 h-48 rounded-full object-cover border-4 border-blue-500"
+        className="w-48 h-48 rounded-full object-cover border-4 border-border"
       />
       <div>
         <h1 className="text-4xl font-bold text-white mb-3">Kiratsuji</h1>
@@ -29,7 +30,7 @@ function AboutHero() {
 // ── 2. JORNADA ───────────────────────────────────────────
 function Journey() {
   return (
-    <section className="py-16 px-8 bg-gray-900">
+    <section className="py-16 px-8">
       <div className="max-w-3xl mx-auto space-y-6 text-gray-400 text-lg leading-relaxed">
         <p>
           Tudo começou pela curiosidade de entender{" "}
@@ -80,7 +81,7 @@ const skills = [
 
 function TechStack() {
   return (
-    <section className="py-16 px-8 bg-gray-950">
+    <section className="py-16 px-8">
       <h2 className="text-3xl font-bold text-white text-center mb-12">
         Arsenal Técnico
       </h2>
@@ -137,7 +138,7 @@ const methods = [
 
 function WorkMethod() {
   return (
-    <section className="py-16 px-8 bg-gray-900">
+    <section className="py-16 px-8">
       <h2 className="text-3xl font-bold text-white text-center mb-12">
         Como Trabalho
       </h2>
@@ -162,7 +163,7 @@ function WorkMethod() {
 // ── 5. CTA ───────────────────────────────────────────────
 function CallToAction() {
   return (
-    <section className="py-20 px-8 text-center bg-gray-950">
+    <section className="py-20 px-8 text-center">
       <p className="text-gray-400 text-lg mb-2">
         Tem uma ideia de projeto ou precisa de uma solução técnica?
       </p>
@@ -180,14 +181,22 @@ function CallToAction() {
 // ── PÁGINA COMPLETA ───────────────────────────────────────
 export default function About() {
   return (
-    <div className="bg-gray-950 min-h-screen">
-      <Navbar />
-      <AboutHero />
-      <Journey />
-      <TechStack />
-      <WorkMethod />
-      <CallToAction />
-      <Footer />
+    <div style={{ backgroundImage: `url(${bgImg})` }} className="flex flex-col min-h-screen bg-black text-gray-800 bg-fixed bg-center bg-no-repeat bg-auto">
+      <header>
+          <Navbar />
+      </header>
+      <main className="grow max-w-7xl w-full mx-auto px-4 py-8 flex flex-col gap-12">
+          <section className="flex flex-col items-center justify-center py-32 bg-primary text-text-primary rounded-2xl border-2 border-border">
+              <AboutHero />
+              <Journey />
+              <TechStack />
+              <WorkMethod />
+              <CallToAction />
+          </section>
+      </main>
+      <footer>
+          <Footer />
+      </footer>
     </div>
   );
 }

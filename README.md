@@ -49,10 +49,7 @@ Portfolio/
 ├── src/
 │   ├── components/          # Componentes reutilizáveis
 │   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Specialties.jsx
-│   │   └── Projects.jsx
+│   │   └── Footer.jsx
 │   │
 │   ├── pages/               # Páginas da aplicação
 │   │   ├── Home.jsx

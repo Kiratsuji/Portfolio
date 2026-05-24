@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme{
+    --color-primary: rgba(10, 1, 17, 0.4);
+    --color-border: rgba(168, 85, 247, 0.3);
+    --color-text-primary: #b6b6b6;
+    --font-heading: "Inter", sans-serif;
+}

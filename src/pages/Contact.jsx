@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import bgImg from "../images/bg.png";
 
 const socialLinks = [
   { label: "GitHub", icon: "⌥", url: "https://github.com/Kiratsuji" },
@@ -215,42 +216,52 @@ function WhatsAppButton() {
 
 export default function ContactPage() {
   return (
-    <div className="bg-gray-950 min-h-screen">
-      <Navbar />
-      <section className="px-8 py-20 max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-white text-center mb-3">
-          Contato & Serviços
-        </h1>
-        <p className="text-gray-400 text-center mb-16">
-          Veja o que posso fazer por você e escolha a melhor forma de entrar em
-          contato.
-        </p>
-      </section>
+    <div style={{ backgroundImage: `url(${bgImg})` }} className="flex flex-col min-h-screen bg-black text-gray-800 bg-fixed bg-center bg-no-repeat bg-auto">
+      <header>
+        <Navbar />
+      </header>
 
-      {/* Layout em duas colunas no desktop, bloco único no mobile */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Coluna esquerda — Serviços */}
-        <div className="flex flex-col gap-6">
-          <h2 className="text-xl font-bold text-white">O que eu resolvo</h2>
-          {services.map((service) => (
-            <ServiceCard key={service.title} service={service} />
-          ))}
-        </div>
+      <main className="grow max-w-7xl w-full mx-auto px-4 py-8 flex flex-col gap-12">
+        <section className="flex flex-col items-center justify-center px-8 py-20 bg-primary text-text-primary rounded-2xl border-2 border-border">
+          <section className="px-8 py-20 max-w-6xl mx-auto">
+            <h1 className="text-4xl font-bold text-white text-center mb-3">
+              Contato & Serviços
+            </h1>
+            <p className="text-gray-400 text-center mb-16">
+              Veja o que posso fazer por você e escolha a melhor forma de entrar em
+              contato.
+            </p>
+          </section>
 
-        {/* Coluna direita — Contato */}
-        <div className="flex flex-col gap-6">
-          <h2 className="text-xl font-bold text-white">Fale comigo</h2>
-          <WhatsAppButton />
-          <div className="relative flex items-center gap-4">
-            <div className="flex-1 h-px bg-gray-700" />
-            <span className="text-gray-600 text-sm">ou pelo formulário</span>
-            <div className="flex-1 h-px bg-gray-700" />
-            <ContactForm />
-            <SocialLinks />
+          {/* Layout em duas colunas no desktop, bloco único no mobile */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Coluna esquerda — Serviços */}
+            <div className="flex flex-col gap-6">
+              <h2 className="text-xl font-bold text-white">O que eu resolvo</h2>
+              {services.map((service) => (
+                  <ServiceCard key={service.title} service={service} />
+              ))}
+            </div>
+
+            {/* Coluna direita — Contato */}
+            <div className="flex flex-col gap-6">
+              <h2 className="text-xl font-bold text-white">Fale comigo</h2>
+              <WhatsAppButton />
+              <div className="relative flex items-center gap-4">
+                <div className="flex-1 h-px bg-gray-700" />
+                <span className="text-gray-600 text-sm">ou pelo formulário</span>
+                <div className="flex-1 h-px bg-gray-700" />
+                <ContactForm />
+                <SocialLinks />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <Footer />
+        </section>
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

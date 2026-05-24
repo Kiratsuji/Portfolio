@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { projects } from "../data/projects";
+import bgImg from "../images/bg.png";
 
 // ── Badge de status ───────────────────────────────────────
 const statusColors = {
@@ -99,35 +100,41 @@ export default function ProjectsPage() {
       : projects.filter((p) => p.category === filtroAtivo);
 
   return (
-    <div className="bg-gray-950 min-h-screen">
-      <Navbar />
+    <div style={{ backgroundImage: `url(${bgImg})` }} className="flex flex-col min-h-screen bg-black text-gray-800 bg-fixed bg-center bg-no-repeat bg-auto">
+      <header>
+        <Navbar />
+      </header>
 
-      <section className="px-8 py-20 max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-white text-center mb-3">
-          Projetos
-        </h1>
-        <p className="text-gray-400 text-center mb-12">
-          Uma seleção do que já construí.
-        </p>
-
-        <FilterBar filtroAtivo={filtroAtivo} onFiltroChange={setFiltroAtivo} />
-
-        {/* Grade de projetos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projetosFiltrados.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-
-        {/* Mensagem se nenhum projeto for encontrado */}
-        {projetosFiltrados.length === 0 && (
-          <p className="text-gray-500 text-center mt-12">
-            Nenhum projeto nessa categoria ainda.
+      <main className="grow max-w-7xl w-full mx-auto px-4 py-8 flex flex-col gap-12">
+        <section className="flex flex-col items-center justify-center px-8 py-20 bg-primary text-text-primary rounded-2xl border-2 border-border">
+          <h1 className="text-4xl font-bold text-white text-center mb-3">
+            Projetos
+          </h1>
+          <p className="text-gray-400 text-center mb-12">
+            Uma seleção do que já construí.
           </p>
-        )}
-      </section>
 
-      <Footer />
+          <FilterBar filtroAtivo={filtroAtivo} onFiltroChange={setFiltroAtivo} />
+
+          {/* Grade de projetos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projetosFiltrados.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+
+          {/* Mensagem se nenhum projeto for encontrado */}
+          {projetosFiltrados.length === 0 && (
+              <p className="text-gray-500 text-center mt-12">
+                Nenhum projeto nessa categoria ainda.
+              </p>
+          )}
+        </section>
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

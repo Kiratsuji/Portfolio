@@ -64,8 +64,7 @@ function ProjectCard({ project }) {
 const categorias = [
   "Todos",
   "Jogos & Mods",
-  "Web & Mobile",
-  "Sistemas & Bancos de Dados",
+  "Web"
 ];
 
 function FilterBar({ filtroAtivo, onFiltroChange }) {

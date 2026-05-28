@@ -1,3 +1,6 @@
+import shatteredHeroes from "../projects/shattered-heroes.png";
+import soccerBall from "../projects/soccerballcatapult.png";
+
 export const projects = [
   {
     id: 1,
@@ -6,7 +9,7 @@ export const projects = [
       "Mod de RPG que introduz um sistema complexo de árvore de habilidades para classes de super-heróis no Minecraft.",
     category: "Jogos & Mods",
     tags: ["Java", "Forge", "AzureLib"],
-    image: "/projects/shattered-heroes.png",
+    image: shatteredHeroes,
     status: "Em Desenvolvimento",
     buttons: {
       primary: { label: "Baixar Mod", url: "#" },
@@ -17,7 +20,7 @@ export const projects = [
     id: 2,
     title: "Portfolio Pessoal",
     description:
-      "Este site. Desenvolvido do zero com foco em UX e identidade visual Tech-Mística.",
+      "Este site. Desenvolvido do zero com foco em UX e aprendizado de tecnologias modernas.",
     category: "Web & Mobile",
     tags: ["React", "Tailwind CSS", "JavaScript"],
     image: "/projects/portfolio.png",
@@ -29,16 +32,16 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Sistema de BD com LGPD",
+    title: "SoccerBall Catapult",
     description:
-      "Modelagem relacional de banco de dados aplicando os princípios da LGPD para controle de acessos.",
-    category: "Sistemas & Bancos de Dados",
-    tags: ["SQL", "Modelagem Relacional", "LGPD"],
-    image: "/projects/database.png",
+        "Um jogo feito em 2 dias para uma gamejam chamada ScoreJam",
+    category: "Jogos & Mods",
+    tags: ["Unity", "C#"],
+    image: soccerBall,
     status: "Concluído",
     buttons: {
-      primary: { label: "Ver Documentação", url: "#" },
-      code: { label: "Ver Código", url: "#" },
+      primary: { label: "Ver Online", url: "#" },
+      code: { label: "Ver Online", url: "#" },
     },
-  },
+  }
 ];

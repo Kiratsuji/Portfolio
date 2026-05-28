@@ -47,7 +47,7 @@ export default function Home() {
           {/* HEADER */}
           <header>
               <Navbar />
-          </header>
+          </header>5
 
           {/* MAIN: O 'flex-grow' força esta parte a esticar e ocupar todo o espaço restante */}
           <main className="grow max-w-7xl w-full mx-auto px-4 py-8 flex flex-col gap-12">

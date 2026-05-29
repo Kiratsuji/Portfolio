@@ -13,7 +13,7 @@ export const projects = [
     image: shatteredHeroes,
     status: "Em Desenvolvimento",
     buttons: {
-      primary: { label: "Baixar Mod", url: "#" },
+      primary: { label: "Baixar Mod", url: "https://www.curseforge.com/minecraft/mc-mods/shattered-heroes" },
       wiki: { label: "Abrir Wiki", url: "#" },
     },
   },
@@ -27,8 +27,7 @@ export const projects = [
     image: portfolio,
     status: "Concluído",
     buttons: {
-      primary: { label: "Ver Online", url: "#" },
-      code: { label: "Ver Código", url: "#" },
+      code: { label: "Ver Código", url: "https://github.com/Kiratsuji/Portfolio" }
     },
   },
   {
@@ -41,8 +40,7 @@ export const projects = [
     image: soccerBall,
     status: "Concluído",
     buttons: {
-      primary: { label: "Ver Online", url: "#" },
-      code: { label: "Ver Online", url: "#" },
+      primary: { label: "Ver Online", url: "https://rerispingo.itch.io/soccerball-catapult" }
     },
   }
 ];

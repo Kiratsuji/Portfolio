@@ -6,7 +6,7 @@ import bgImg from "../images/bg.png";
 
 // ── Badge de status ───────────────────────────────────────
 const statusColors = {
-  Concluído: "bg-green-500",
+  "Concluído": "bg-green-500",
   "Em Desenvolvimento": "bg-yellow-500",
   "Game Jam": "bg-purple-500",
   "Em Alfa": "bg-blue-500",

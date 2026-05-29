@@ -1,5 +1,6 @@
 import shatteredHeroes from "../projects/shattered-heroes.png";
 import soccerBall from "../projects/soccerballcatapult.png";
+import portfolio from "../images/bg.png"
 
 export const projects = [
   {
@@ -23,7 +24,7 @@ export const projects = [
       "Este site. Desenvolvido do zero com foco em UX e aprendizado de tecnologias modernas.",
     category: "Web & Mobile",
     tags: ["React", "Tailwind CSS", "JavaScript"],
-    image: "/projects/portfolio.png",
+    image: portfolio,
     status: "Concluído",
     buttons: {
       primary: { label: "Ver Online", url: "#" },

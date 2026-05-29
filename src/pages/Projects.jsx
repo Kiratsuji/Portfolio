@@ -47,7 +47,6 @@ function ProjectCard({ project }) {
                 ))}
             </div>
 
-            {/* Título e descrição */}
             <div className="px-5 pt-3 pb-4 flex-1">
                 <h3 className="text-white font-bold text-lg mb-1">{project.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
@@ -55,7 +54,6 @@ function ProjectCard({ project }) {
                 </p>
             </div>
 
-            {/* Botões — FIX: sintaxe JSX correta para <a> */}
             <div className="flex gap-3 px-5 pb-5">
                 {project.buttons.primary && (
                     <a

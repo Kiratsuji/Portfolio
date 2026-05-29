@@ -1,6 +1,6 @@
 import shatteredHeroes from "../projects/shattered-heroes.png";
 import soccerBall from "../projects/soccerballcatapult.png";
-import portfolio from "../images/bg.png"
+import portfolio from "../images/light_bg1.png"
 
 export const projects = [
   {

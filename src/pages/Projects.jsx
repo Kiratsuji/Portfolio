@@ -115,14 +115,12 @@ export default function ProjectsPage() {
 
           <FilterBar filtroAtivo={filtroAtivo} onFiltroChange={setFiltroAtivo} />
 
-          {/* Grade de projetos */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projetosFiltrados.map((project) => (
                 <ProjectCard key={project.id} project={project} />
             ))}
           </div>
 
-          {/* Mensagem se nenhum projeto for encontrado */}
           {projetosFiltrados.length === 0 && (
               <p className="text-gray-500 text-center mt-12">
                 Nenhum projeto nessa categoria ainda.

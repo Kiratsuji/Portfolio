@@ -233,9 +233,7 @@ export default function ContactPage() {
             </p>
           </section>
 
-          {/* Layout em duas colunas no desktop, bloco único no mobile */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Coluna esquerda — Serviços */}
             <div className="flex flex-col gap-6">
               <h2 className="text-xl font-bold text-white">O que eu resolvo</h2>
               {services.map((service) => (
@@ -243,15 +241,11 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Coluna direita — Contato */}
             <div className="flex flex-col gap-6">
               <h2 className="text-xl font-bold text-white">Fale comigo</h2>
-              <WhatsAppButton />
-              <div className="relative flex items-center gap-4">
-                <div className="flex-1 h-px bg-gray-700" />
-                <span className="text-gray-600 text-sm">ou pelo formulário</span>
-                <div className="flex-1 h-px bg-gray-700" />
+              <div className="flex flex-col gap-4">
                 <ContactForm />
+                <WhatsAppButton />
                 <SocialLinks />
               </div>
             </div>

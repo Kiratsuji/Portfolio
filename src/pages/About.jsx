@@ -115,22 +115,18 @@ function TechStack() {
 // ── 4. METODOLOGIA ───────────────────────────────────────
 const methods = [
   {
-    icon: "📋",
     title: "Planejamento Transparente",
     desc: "Alinhamento claro de etapas, prazos e expectativas do início ao fim do projeto.",
   },
   {
-    icon: "⚡",
     title: "Código Limpo e Otimizado",
     desc: "Foco em performance, legibilidade e facilidade de manutenção futura.",
   },
   {
-    icon: "🔒",
     title: "Segurança e Privacidade",
     desc: "Cuidado rigoroso com dados, integridade do sistema e boas práticas de segurança.",
   },
   {
-    icon: "🔄",
     title: "Comunicação Contínua",
     desc: "Atualizações frequentes para que você sempre saiba o andamento do projeto.",
   },
@@ -148,7 +144,6 @@ function WorkMethod() {
             key={method.title}
             className="flex gap-4 bg-gray-800 p-6 rounded-xl border border-gray-700"
           >
-            <span className="text-3xl">{method.icon}</span>
             <div>
               <h3 className="text-white font-semibold mb-1">{method.title}</h3>
               <p className="text-gray-400 text-sm">{method.desc}</p>
